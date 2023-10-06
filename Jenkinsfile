@@ -5,13 +5,7 @@ pipeline{
         maven 'maven3'
     }
     stages{
-        stage("checkout"){
-            steps{
-                sh "ls"
-                git branch:"main", url:"https://github.com/bhattur/course3-jenkins-gs-spring-petclinic"
-                sh "ls"
-            }
-        }
+        
         stage("build"){
             steps{
                 sh "mvn package"
